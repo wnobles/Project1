@@ -16,6 +16,7 @@ We also used Individual Income Tax Statistics from the IRS for 2018 in NYC. The 
 https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2018-zip-code-data-soi
 
 We used this article detailing top-funded NYC start-up zip codes to create one of our graphs and to locate stations in those same zip codes:
+
 https://www.builtinnyc.com/2016/08/09/nyc-fundings-zipcode-2016
 
 ### Tools Used
