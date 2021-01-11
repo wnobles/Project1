@@ -11,7 +11,23 @@ We used turnstile data from the MTA for 6 separate weeks over the first 6 months
 
 http://web.mta.info/developers/turnstile.html
 
-We also used Individual Income Tax Statistics from the IRS for 2018 in NYC. The data can be retrieved here:
+Geographic data (the variables GTFS Latitude and GTFS Longitude) on the stations in our turnstile data were retrieved from a second source published on the MTA website:
+
+http://web.mta.info/developers/data/nyct/subway/Stations.csv
+
+Because the station names and IDs of the geographic data were published in a different form from our turnstile data, a separate dataset was required to map the stations in our turnstile data with an ID variable called "Complex ID." The Complex ID variable for each station name and remote unit for our turnstile data was identified in a dataset published on qri, a platform for datasets. A link to this data can be found here:
+
+https://qri.cloud/nyc-transit-data/remote_complex_lookup
+
+We note that no code was taken from the separate analysis  performed by the author on aggregating turnstile entries and exits from the MTA data.
+
+With our geographic coordinates mapped to our turnstile data, we then relied on the following dataset that contained the geographic coordinates of US Zip Codes:
+
+https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/table/?q=
+
+Zip Codes from this dataset were mapped to each MTA station's geographic coordinates by taking identifying the zip code closest to the station. This was operationalized by taking the Euclidean distance between the station's coordinates and the zip code's coordinates.
+
+Once zip code information was mapped to our turnstile data, we used the Individual Income Tax Statistics from the IRS for 2018 in NYC. Here, we looked at the total number of tax returns made at each income level for each zip code. We calculated the proportion of total tax returns made by individuals and households with annual incomes greater than $200K for each zip code as our measure for high-income earners. The data can be retrieved here:
 
 https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2018-zip-code-data-soi
 
