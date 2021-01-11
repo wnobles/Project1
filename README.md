@@ -15,11 +15,11 @@ Geographic data (the variables GTFS Latitude and GTFS Longitude) on the stations
 
 http://web.mta.info/developers/data/nyct/subway/Stations.csv
 
-Because the station names and IDs of the geographic data were published in a different form from our turnstile data, a separate dataset was required to map the stations in our turnstile data with an ID variable called "Complex ID." The Complex ID variable for each station name and remote unit for our turnstile data was identified in a dataset published on qri, a platform for datasets. A link to this data can be found here:
+Because the station names and IDs of the geographic data were published in a different form from our turnstile data, a separate dataset was required to map the stations in our turnstile data with an ID variable called "Complex ID." The Complex ID variable for our turnstile data was identified for each of our station names and remote units in a dataset published on qri, a platform for datasets. A link to this data can be found here:
 
 https://qri.cloud/nyc-transit-data/remote_complex_lookup
 
-We note that no code was taken from the separate analysis  performed by the author on aggregating turnstile entries and exits from the MTA data.
+We note that no code was taken from the separate analysis performed by the author of this source data set who had aggregated turnstile entries and exits from the MTA data.
 
 With our geographic coordinates mapped to our turnstile data, we then relied on the following dataset that contained the geographic coordinates of US Zip Codes:
 
